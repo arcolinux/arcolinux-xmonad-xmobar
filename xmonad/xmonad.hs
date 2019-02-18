@@ -351,10 +351,11 @@ myMouseBindings (XConfig {XMonad.modMask = modMask}) = M.fromList $
 --XMOBAR
 main = do
             
-        xmproc <- spawnPipe "xmobar"
+        xmproc1 <- spawnPipe "xmobar -x 1 $HOME/.xmobarrc" -- xmobar monitor 1
+        xmproc2 <- spawnPipe "xmobar -x 2 $HOME/.xmobarrc" -- xmobar monitor 2
         xmonad $ ewmh $ mydefaults {
         logHook =  dynamicLogWithPP $ def {
-        ppOutput = System.IO.hPutStrLn xmproc
+        ppOutput = \x -> hPutStrLn xmproc1 x  >> hPutStrLn xmproc2 x
         , ppTitle = xmobarColor myTitleColor "" . ( \ str -> "")
         , ppCurrent = xmobarColor myCurrentWSColor "" . wrap """"
         , ppVisible = xmobarColor myVisibleWSColor "" . wrap """"
