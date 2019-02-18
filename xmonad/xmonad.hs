@@ -1,6 +1,5 @@
-import System.IO
-import System.Exit
 import System.IO (Handle, hPutStrLn)
+import System.Exit
 import XMonad
 import XMonad.Hooks.SetWMName
 import XMonad.Hooks.DynamicLog
