@@ -54,3 +54,4 @@ compton --config $HOME/.xmonad/scripts/compton.conf &
 #run spotify &
 #run atom &
 #run volumeicon &
+#run telegram-desktop &
