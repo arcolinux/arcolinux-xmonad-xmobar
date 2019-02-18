@@ -67,11 +67,11 @@ myStartupHook = do
 
 encodeCChar = map fromIntegral . B.unpack
 
-myTitleColor = "red" -- color of window title
+myTitleColor = "#c91a1a" -- color of window title
 myTitleLength = 80 -- truncate window title to this length
-myCurrentWSColor = "#a2d1ec" -- color of active workspace
-myVisibleWSColor = "red" -- color of inactive workspace
-myUrgentWSColor = "red" -- color of workspace with 'urgent' window
+myCurrentWSColor = "#6790eb" -- color of active workspace
+myVisibleWSColor = "#aaaaaa" -- color of inactive workspace
+myUrgentWSColor = "#c91a1a" -- color of workspace with 'urgent' window
 myHiddenNoWindowsWSColor = "white"
 
 myLayoutHook = spacingRaw True (Border 0 5 5 5) True (Border 5 5 5 5) True $ gaps [(U,35), (D,5), (R,5), (L,5)]
