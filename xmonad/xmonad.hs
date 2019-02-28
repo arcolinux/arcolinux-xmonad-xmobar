@@ -60,8 +60,8 @@ mydefaults = def {
         , startupHook         = myStartupHook
         , manageHook          = myManageHook
         , handleEventHook     = fullscreenEventHook <+> docksEventHook <+> minimizeEventHook
-        } 
-        
+        }
+
 -- Autostart
 myStartupHook = do
     spawn "$HOME/.xmonad/scripts/autostart.sh"
@@ -80,13 +80,13 @@ myLayoutHook = spacingRaw True (Border 0 5 5 5) True (Border 5 5 5 5) True $ gap
                $ avoidStruts
                $ mkToggle (NBFULL ?? NOBORDERS ?? EOT)
                $ smartBorders
-               $ tiled ||| Grid ||| spiral (6/7) ||| ThreeColMid 1 (3/100) (1/2) ||| noBorders Full  
+               $ tiled ||| Grid ||| spiral (6/7) ||| ThreeColMid 1 (3/100) (1/2) ||| noBorders Full
                     where
                     tiled   = Tall nmaster delta ratio
                     nmaster = 1
                     delta   = 3/100
                     ratio   = 1/2
-                
+
 
 
 --WORKSPACES
@@ -244,15 +244,15 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
   -- Decrease brightness
   , ((0, xF86XK_MonBrightnessDown), spawn $ "xbacklight -dec 5")
 
-  , ((0, xF86XK_AudioPlay), spawn $ "mpc toggle")
-  , ((0, xF86XK_AudioNext), spawn $ "mpc next")
-  , ((0, xF86XK_AudioPrev), spawn $ "mpc prev")
-  , ((0, xF86XK_AudioStop), spawn $ "mpc stop")
+--  , ((0, xF86XK_AudioPlay), spawn $ "mpc toggle")
+--  , ((0, xF86XK_AudioNext), spawn $ "mpc next")
+--  , ((0, xF86XK_AudioPrev), spawn $ "mpc prev")
+--  , ((0, xF86XK_AudioStop), spawn $ "mpc stop")
 
---  , ((0, xF86XK_AudioPlay), spawn $ "playerctl play-pause")
---  , ((0, xF86XK_AudioNext), spawn $ "playerctl next")
---  , ((0, xF86XK_AudioPrev), spawn $ "playerctl previous")
---  , ((0, xF86XK_AudioStop), spawn $ "playerctl stop")
+  , ((0, xF86XK_AudioPlay), spawn $ "playerctl play-pause")
+  , ((0, xF86XK_AudioNext), spawn $ "playerctl next")
+  , ((0, xF86XK_AudioPrev), spawn $ "playerctl previous")
+  , ((0, xF86XK_AudioStop), spawn $ "playerctl stop")
 
 
   --------------------------------------------------------------------
@@ -352,7 +352,7 @@ myMouseBindings (XConfig {XMonad.modMask = modMask}) = M.fromList $
 
 --XMOBAR
 main = do
-            
+
         xmproc0 <- spawnPipe "xmobar -x 0 $HOME/.xmobarrc" -- xmobar monitor 1
         xmproc1 <- spawnPipe "xmobar -x 1 $HOME/.xmobarrc" -- xmobar monitor 2
         xmonad $ ewmh $ mydefaults {
@@ -370,8 +370,8 @@ main = do
            "Spacing Tall"                 -> "<fn=1>Tall</fn>"
            "Spacing Grid"                 -> "<fn=1>Grid</fn>"
            "Spacing Spiral"               -> "<fn=1>spiral</fn>"
-           "Spacing ThreeCol"             -> "<fn=1>ThreeColMid</fn>" 
-           "Spacing Full"                 -> "<fn=1>Full</fn>"         
+           "Spacing ThreeCol"             -> "<fn=1>ThreeColMid</fn>"
+           "Spacing Full"                 -> "<fn=1>Full</fn>"
            _                                         -> x )
  }
 }
