@@ -1,3 +1,9 @@
+#https://wiki.archlinux.org/index.php/stalonetray
+#sudo pacman -S stalonetray
+#run in terminal
+#theme it yourself if you want to
+#it is not intended to stay permanently
+#set your applications and kill stalonetray again
 decorations none
 transparent false
 dockapp_mode none
