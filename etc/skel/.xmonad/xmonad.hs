@@ -119,7 +119,7 @@ myManageHook = composeAll . concat $
        ]
     where
 --    viewShift    = doF . liftM2 (.) W.greedyView W.shift
-    myCFloats = ["Arandr", "Galculator", "Oblogout", "feh", "mpv"]
+    myCFloats = ["Arandr", "Galculator", "Oblogout", "feh", "mpv", "Xfce4-terminal"]
     myTFloats = ["Downloads", "Save As..."]
     myRFloats = []
     myIgnores = ["desktop_window"]
