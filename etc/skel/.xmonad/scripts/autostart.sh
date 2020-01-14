@@ -34,6 +34,7 @@ run variety &
 run nm-applet &
 run pamac-tray &
 run xfce4-power-manager &
+#run volumeicon &
 numlockx on &
 blueberry-tray &
 picom --config $HOME/.xmonad/scripts/picom.conf &
@@ -48,7 +49,6 @@ picom --config $HOME/.xmonad/scripts/picom.conf &
 #run thunar &
 #run spotify &
 #run atom &
-#run volumeicon &
 
 #run telegram-desktop &
 #run discord &
