@@ -4,7 +4,7 @@ Type = Package
 Target = xmonad*
 
 [Action]
-Description = Recompiling Xmonad now ...
+Description = Recompiling Xmonad now because of Xmonad updates...
 When = PostTransaction
 Depends = xmonad
 Exec = /bin/sh -c "runuser -l $( who | cut -d ' ' -f1 | uniq) -c 'xmonad --recompile'"
