@@ -59,7 +59,7 @@ mydefaults = def {
         , layoutHook          = myLayoutHook
         , startupHook         = myStartupHook
         , manageHook          = myManageHook
-        , handleEventHook     = fullscreenEventHook <+> docksEventHook <+> minimizeEventHook
+        , handleEventHook     = minimizeEventHook
         }
 
 -- Autostart
